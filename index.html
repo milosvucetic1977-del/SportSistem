@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<title>Privatni Live Stream</title>
+<style>
+body { background:#000; color:#fff; text-align:center; font-family:Arial; }
+#player { display:none; }
+</style>
+</head>
+<body>
+
+<h2>Privatni Live Stream</h2>
+
+<input type="password" id="pass" placeholder="Unesi lozinku">
+<button onclick="check()">Uđi</button>
+
+<div id="player">
+<video controls autoplay width="80%">
+<source src="https://vaughn.live/sportsistem4" type="application/x-mpegURL">
+</video>
+</div>
+
+<script>
+function check() {
+  if (document.getElementById("pass").value === "tajna123") {
+    document.getElementById("player").style.display = "block";
+  } else {
+    alert("Pogrešna lozinka!");
+  }
+}
+</script>
+
+</body>
+</html>
